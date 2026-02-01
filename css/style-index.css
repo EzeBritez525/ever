@@ -294,6 +294,7 @@ html {
 
     .carousel-item {
         padding: 15px 15px 70px;
+        padding-top: 45px;
     }
 
     .carousel-item img {
@@ -303,11 +304,12 @@ html {
         padding: 12px;
     }
 
-    /* Badge mobile mejorado */
+    /* Badge mobile mejorado - posicionado arriba sin tapar imagen */
     .carousel-badge {
-        top: 25px;
+        top: 10px;
         font-size: 11px;
-        padding: 6px 16px;
+        padding: 5px 14px;
+        background: rgba(0, 0, 0, 0.90);
     }
 
     .hero-cta {
@@ -590,7 +592,7 @@ footer li {
 ======================= */
 
 .benefits {
-    background-color: #F4F0E5;
+    background-color: #fff;
 }
 
 .benefit-card {
