@@ -5,17 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="EverShop - Prendas personalizadas, remeras oversize y básicas con estilo único">
-    <title>EverShop - Diseñá tu estilo en cada prenda</title>
+    <title>EverShop</title>
     
     <!-- Preconnect para performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Google Fonts - Tipografía distintiva -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Preload imagen principal -->
-    <link rel="preload" as="image" href="img/remera-1.jpeg">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -23,24 +20,23 @@
     <link rel="stylesheet" href="css/style-index.css">
 </head>
 
-<body class="light-mode">
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="img/evershop logo.png" alt="logo"
-                        style="max-height: 70px;"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/evershop logo.png" alt="EverShop Logo" style="max-height: 70px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="paginas/productos.html">Productos</a>
+                            <a class="nav-link" href="paginas/productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="paginas/acerca.html">Acerca De</a>
+                            <a class="nav-link" href="paginas/acerca.html">Acerca De</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="paginas/trabaja.html">Trabaja Conmigo</a>
@@ -67,24 +63,12 @@
 
                     <!-- IZQUIERDA: SLIDER -->
                     <div class="col-md-5 position-relative">
-                        <div id="heroCarousel" class="carousel slide h-100" data-bs-ride="carousel"
-                            data-bs-interval="4000" data-bs-pause="hover" data-bs-wrap="true" data-bs-touch="true">
+                        <div id="heroCarousel" class="carousel slide h-100" data-bs-ride="carousel">
                             
-                            <!-- Indicadores mejorados -->
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
-                                    aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"
-                                    aria-label="Slide 4"></button>
-                            </div>
-
+                    
                             <div class="carousel-inner h-100">
                                 <div class="carousel-item active">
-                                    <img src="img/camisilla1.jpeg" class="d-block" alt="Nueva colección" loading="eager">
+                                    <img src="img/camisilla1.jpeg" class="d-block" alt="Nueva colección">
                                     <div class="carousel-badge">Nuevo</div>
                                 </div>
 
@@ -104,7 +88,7 @@
                                 </div>
                             </div>
 
-                            <!-- CTA mejorado -->
+                            <!-- CTA -->
                             <div class="hero-cta">
                                 <p class="mb-3">Conocé todos nuestros productos</p>
                                 <a href="paginas/productos.html" class="btn btn-cta">
@@ -113,14 +97,12 @@
                                 </a>
                             </div>
 
-                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
                                 <span class="visually-hidden">Anterior</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
                                 <span class="visually-hidden">Siguiente</span>
                             </button>
                         </div>
@@ -128,9 +110,7 @@
 
                     <!-- LEMA SOLO MOBILE -->
                     <div class="col-12 d-block d-md-none text-center py-4">
-                        <p class="hero-slogan">
-                            Diseñá tu estilo en cada prenda.
-                        </p>
+                        <p class="hero-slogan">Diseñá tu estilo en cada prenda.</p>
                     </div>
 
                     <!-- DERECHA: BIENVENIDA -->
@@ -222,7 +202,7 @@
                     <div class="col-6 col-md-3">
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="img/camisilla1.jpeg" alt="Remera Oversize" class="img-fluid" loading="lazy">
+                                <img src="img/camisilla1.jpeg" alt="Camisilla" class="img-fluid" loading="lazy">
                                 <div class="product-overlay">
                                     <a href="paginas/productos.html" class="btn btn-sm btn-light">Ver más</a>
                                 </div>
@@ -236,7 +216,7 @@
                     <div class="col-6 col-md-3">
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="img/camisilla3.jpeg" alt="Canguro Premium" class="img-fluid" loading="lazy">
+                                <img src="img/camisilla3.jpeg" alt="Camisilla" class="img-fluid" loading="lazy">
                                 <div class="product-overlay">
                                     <a href="paginas/productos.html" class="btn btn-sm btn-light">Ver más</a>
                                 </div>
@@ -250,7 +230,7 @@
                     <div class="col-6 col-md-3">
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="img/canguros-3.jpeg" alt="Básicas Essential" class="img-fluid" loading="lazy">
+                                <img src="img/canguros-3.jpeg" alt="Canguro Premium" class="img-fluid" loading="lazy">
                                 <div class="product-overlay">
                                     <a href="paginas/productos.html" class="btn btn-sm btn-light">Ver más</a>
                                 </div>
@@ -286,9 +266,6 @@
             </div>
         </section>
 
-        <!-- TESTIMONIALS SECTION -->
-
-
         <!-- CTA SECTION -->
         <section class="cta-section py-5">
             <div class="container">
@@ -298,9 +275,7 @@
                         <p class="cta-text">Descubrí nuestra colección completa y encontrá la prenda perfecta para vos.</p>
                     </div>
                     <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                        <a href="paginas/productos.html" class="btn btn-light btn-lg">
-                            Explorar Productos
-                        </a>
+                        <a href="paginas/productos.html" class="btn btn-light btn-lg">Explorar Productos</a>
                     </div>
                 </div>
             </div>
@@ -343,9 +318,7 @@
                     </p>
                     <p class="mb-1">
                         <i class="bi bi-envelope"></i>
-                        <a href="mailto:evershop.overs.py@gmail.com">
-                            evershop.overs.py@gmail.com
-                        </a>
+                        <a href="mailto:evershop.overs.py@gmail.com">evershop.overs.py@gmail.com</a>
                     </p>
 
                     <!-- REDES -->
@@ -367,9 +340,7 @@
 
             <!-- COPYRIGHT -->
             <div class="text-center pb-3">
-                <small>
-                    © 2026 EverShop — Todos los derechos reservados
-                </small>
+                <small>© 2026 EverShop — Todos los derechos reservados</small>
             </div>
         </div>
     </footer>
