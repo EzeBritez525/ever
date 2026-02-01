@@ -1,0 +1,126 @@
+/* Ajustar el espaciado superior del main */
+main.container.py-5.mt-5 {
+    padding-top: 2rem !important;
+}
+
+/* Reducir el margen inferior de la sección de encabezado */
+section.mb-5.text-center {
+    margin-bottom: 2rem !important;
+}
+
+/* Responsive - menos espacio en móvil */
+@media (max-width: 768px) {
+    main.container.py-5.mt-5 {
+        padding-top: 1.5rem !important;
+        margin-top: 3.5rem !important;
+    }
+}
+
+/* Estilos para centrar las tarjetas de Diseñadores y Proveedores */
+
+/* Contenedor de las áreas de colaboración */
+.row.text-center.mb-5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Las primeras 3 tarjetas permanecen en fila completa */
+.row.text-center.mb-5 .col-md-4:nth-child(1),
+.row.text-center.mb-5 .col-md-4:nth-child(2),
+.row.text-center.mb-5 .col-md-4:nth-child(3) {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+/* Las últimas 2 tarjetas (Diseñadores y Proveedores) se centran más hacia la izquierda */
+.row.text-center.mb-5 .col-md-4:nth-child(4),
+.row.text-center.mb-5 .col-md-4:nth-child(5) {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+/* Ajuste para mover las tarjetas hacia la izquierda */
+.row.text-center.mb-5 .col-md-4:nth-child(4) {
+    margin-left: 8.333333%; /* Más cerca de la izquierda que centrado */
+}
+
+/* Estilos para las tarjetas */
+.row.text-center.mb-5 .col-md-4 > div {
+    background-color: #F4F0E5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.row.text-center.mb-5 .col-md-4 > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Estilos para los íconos */
+.row.text-center.mb-5 i {
+    color: #212529;
+    transition: color 0.3s ease;
+}
+
+.row.text-center.mb-5 .col-md-4:hover i {
+    color: #0d6efd;
+}
+
+/* Responsive - TABLET */
+@media (max-width: 991px) and (min-width: 769px) {
+    .row.text-center.mb-5 .col-md-4:nth-child(4) {
+        margin-left: 0;
+    }
+    
+    .row.text-center.mb-5 .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive - MÓVIL (todas ocupan el 100% una debajo de otra) */
+@media (max-width: 768px) {
+    .row.text-center.mb-5 .col-md-4:nth-child(4) {
+        margin-left: 0 !important;
+    }
+    
+    .row.text-center.mb-5 .col-md-4,
+    .row.text-center.mb-5 .col-md-4:nth-child(1),
+    .row.text-center.mb-5 .col-md-4:nth-child(2),
+    .row.text-center.mb-5 .col-md-4:nth-child(3),
+    .row.text-center.mb-5 .col-md-4:nth-child(4),
+    .row.text-center.mb-5 .col-md-4:nth-child(5) {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Espaciado entre tarjetas en móvil */
+    .row.text-center.mb-5 .col-md-4 {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 1rem;
+    }
+    
+    /* Ajustar padding interno de las tarjetas en móvil */
+    .row.text-center.mb-5 .col-md-4 > div {
+        padding: 1.5rem !important;
+    }
+    
+    /* Tamaño de íconos en móvil */
+    .row.text-center.mb-5 i {
+        font-size: 2.5rem !important;
+    }
+    
+    /* Tamaño de títulos en móvil */
+    .row.text-center.mb-5 h5 {
+        font-size: 1.1rem;
+    }
+    
+    /* Tamaño de texto en móvil */
+    .row.text-center.mb-5 p {
+        font-size: 0.95rem;
+    }
+}

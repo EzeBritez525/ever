@@ -1,0 +1,749 @@
+/* =======================
+   BASE
+======================= */
+
+body {
+    background-color: #F4F0E5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+
+.navbar {
+    background-color: #F4F0E5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #333;
+    transition: color 0.3s ease,
+                text-shadow 0.3s ease,
+                transform 0.3s ease,
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.navbar .nav-link {
+    padding: 8px 14px;
+    border-radius: 10px;
+}
+
+.navbar .nav-link:hover {
+    color: #000;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(-1px);
+    background-color: #e6dfcf;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.navbar .nav-link.active {
+    background-color: #e6dfcf;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+    font-weight: 500;
+}
+
+.navbar-brand {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.navbar-brand img {
+    display: block;
+    max-height: 50px;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 6px 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* =======================
+   NAVBAR MOBILE
+======================= */
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #F4F0E5;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 14px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .navbar-nav {
+        gap: 6px;
+    }
+
+    .navbar .nav-link {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .navbar .nav-link:active {
+        transform: scale(0.96);
+    }
+}
+
+/* =======================
+   BOTÓN WHATSAPP
+======================= */
+
+.btn-success {
+    background-color: #4be37a;
+    border-color: #4be37a;
+}
+
+.btn-success:hover {
+    background-color: #3fd46d;
+    border-color: #3fd46d;
+}
+
+.btn-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(75, 227, 122, 0.5);
+}
+
+@media (max-width: 768px) {
+    .btn-success.position-fixed {
+        bottom: 16px !important;
+        right: 16px !important;
+    }
+}
+
+/* =======================
+   HERO
+======================= */
+
+.hero {
+    min-height: auto;
+    max-height: 85vh;
+    margin-top: 90px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.04),
+        rgba(0,0,0,0)
+    );
+    pointer-events: none;
+}
+
+#heroCarousel,
+.carousel-inner {
+    height: 100%;
+    max-height: 500px;
+}
+
+.carousel-item {
+    position: relative;
+    height: 100%;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =======================
+   CAROUSEL CARD STYLE - MEJORADO
+======================= */
+
+.carousel-item {
+    padding: 10px 20px 60px;
+}
+
+.carousel-item img {
+    width: 100%;
+    max-width: 320px;
+    height: 380px;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 
+        0 8px 30px rgba(0, 0, 0, 0.12),
+        0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+}
+
+.carousel-item.active img {
+    transform: scale(1);
+}
+
+.carousel-item img:hover {
+    transform: scale(1.02);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* =======================
+   CAROUSEL BADGE - POSICIONAMIENTO MEJORADO
+======================= */
+
+.carousel-badge {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #F4F0E5;
+    padding: 6px 16px;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    border-radius: 999px;
+    font-weight: 500;
+    z-index: 10;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* =======================
+   HERO CTA
+======================= */
+
+.hero-cta {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.hero-cta p {
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.hero-cta .btn {
+    margin-top: 6px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #f4f0e5;
+    border: none;
+    font-size: 13px;
+    padding: 7px 16px;
+    border-radius: 25px;
+    letter-spacing: 0.4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-cta .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+/* =======================
+   HERO MOBILE - OPTIMIZADO
+======================= */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        margin-top: 70px;
+        padding-bottom: 20px;
+    }
+
+    .hero .container-fluid {
+        padding: 0.5rem !important;
+    }
+
+    .mobile-title {
+        padding-top: 1.5rem !important;
+        padding-bottom: 0.8rem !important;
+        margin: 0;
+    }
+
+    .col-12.d-block.d-md-none.text-center.py-4 {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    #heroCarousel {
+        min-height: 400px;
+        max-height: 55vh;
+    }
+
+    .carousel-item {
+        padding: 15px 15px 70px;
+    }
+
+    .carousel-item img {
+        max-width: 100%;
+        height: 380px;
+        border-radius: 14px;
+        padding: 12px;
+    }
+
+    /* Badge mobile mejorado */
+    .carousel-badge {
+        top: 25px;
+        font-size: 11px;
+        padding: 6px 16px;
+    }
+
+    .hero-cta {
+        bottom: 18px;
+    }
+
+    .hero-cta p {
+        font-size: 13px;
+        color: #333;
+    }
+
+    .hero-cta .btn {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
+
+    .hero-cta .btn:active {
+        transform: scale(0.96);
+    }
+}
+
+/* =======================
+   TEXTOS
+======================= */
+
+.welcome-title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.brand-title {
+    margin: 0;
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+.brand-ever {
+    font-weight: 800;
+}
+
+.brand-shop {
+    font-style: italic;
+    font-weight: 300;
+    opacity: 0.85;
+}
+
+.hero-slogan {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.mobile-title {
+    font-style: italic;
+    font-weight: 300;
+    opacity: 0.85;
+}
+
+.welcome-badge {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.08);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    letter-spacing: 0.5px;
+}
+
+.hero-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #555;
+}
+
+.feature-item i {
+    color: #000;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .brand-title {
+        font-size: 36px;
+    }
+
+    .welcome-title {
+        font-size: 18px;
+    }
+
+    .mobile-title {
+        font-size: 22px;
+        color: #333;
+    }
+
+    .hero-slogan {
+        font-size: 15px;
+    }
+}
+
+/* =======================
+   FOOTER ESTILO NAVBAR
+======================= */
+
+footer {
+    background-color: #F4F0E5;
+    color: #333;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.08);
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul a:hover {
+    color: #000;
+}
+
+footer .bi {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover .bi {
+    transform: scale(1.15);
+}
+
+footer .social-icons a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a.instagram:hover {
+    color: #cd1854;
+}
+
+footer .social-icons a.tiktok:hover {
+    color: #00f2ea;
+}
+
+footer .social-icons a.whatsapp:hover {
+    color: #25D366;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.15);
+}
+
+footer h5 {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+footer p,
+footer small,
+footer li {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    footer img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    footer ul {
+        padding: 0;
+    }
+}
+
+/* =======================
+   TRANSICIONES SUAVES
+======================= */
+
+.carousel-item {
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+/* =======================
+   INDICADORES PERSONALIZADOS
+======================= */
+
+.carousel-indicators {
+    bottom: 10px;
+    z-index: 10;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.25);
+    border: none;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: rgba(0,0,0,0.85);
+    transform: scale(1.2);
+}
+
+/* =======================
+   CONTROLES DEL CAROUSEL
+======================= */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    opacity: 0.75;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* =======================
+   ANIMACIÓN CTA
+======================= */
+
+.hero-cta {
+    animation: fadeUpCTA 0.8s ease forwards;
+}
+
+@keyframes fadeUpCTA {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 12px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* =======================
+   SOMBRA SUTIL HERO
+======================= */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(0,0,0,0.03),
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+#heroCarousel {
+    position: relative;
+    z-index: 2;
+}
+
+/* =======================
+   BENEFITS SECTION
+======================= */
+
+.benefits {
+    background-color: #F4F0E5;
+}
+
+.benefit-card {
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.benefit-card h5 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.benefit-card p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* =======================
+   FEATURED PRODUCTS
+======================= */
+
+.featured-products {
+    background-color: #F4F0E5;
+}
+
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 16px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    background-color: rgba(244, 240, 229, 0.3);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+    padding: 10px;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+.product-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-info h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    color: #666;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* =======================
+   CTA SECTION
+======================= */
+
+.cta-section {
+    background: linear-gradient(135deg, #333 0%, #555 100%);
+    color: #fff;
+}
+
+.cta-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.cta-text {
+    color: #e0e0e0;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* =======================
+   RESPONSIVE ADJUSTMENTS
+======================= */
+
+@media (max-width: 576px) {
+    .carousel-indicators {
+        bottom: 8px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 6px;
+        height: 6px;
+        margin: 0 4px;
+    }
+}

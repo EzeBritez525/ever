@@ -1,0 +1,261 @@
+/* =======================
+   BASE
+======================= */
+
+body {
+    background-color: #F4F0E5;
+    padding-top: 90px;
+     max-width: 100%;  /* Evita el scroll horizontal */
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+html {
+    scroll-behavior: smooth; 
+    max-width: 100%;   /* Evita el scroll horizontal */
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+.container, .container-fluid {
+    overflow-x: hidden;
+}
+
+/* Ajustar el row que puede causar el desbordamiento */
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Asegurar que las columnas no se salgan */
+[class*="col-"] {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+@media (max-width: 768px) {
+    main.container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .row.g-4 {
+        --bs-gutter-x: 0.5rem; /* Reduce el espacio entre productos */
+    }
+}
+/* NUEVO: scroll suave 
+main {
+    padding-top: 120px;
+    outline: 2px solid red;
+}
+*/
+/* =======================
+   NAVBAR
+======================= */
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px;
+    }
+}
+
+.navbar {
+    background-color: #F4F0E5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #333; /* AJUSTE: mejor contraste */
+    transition: color 0.3s ease,
+                text-shadow 0.3s ease,
+                transform 0.3s ease,
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.navbar .nav-link {
+    padding: 8px 14px;
+    border-radius: 10px;
+}
+
+.navbar .nav-link:hover {
+    color: #000;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(-1px);
+    background-color: #e6dfcf;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* NUEVO: link activo */
+.navbar .nav-link.active {
+    background-color: #e6dfcf;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+    font-weight: 500;
+}
+
+.navbar-brand {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.navbar-brand img {
+    display: block;
+    max-height: 50px;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 6px 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* =======================
+   NAVBAR MOBILE
+======================= */
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #F4F0E5;
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 14px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .navbar-nav {
+        gap: 6px;
+    }
+
+    .navbar .nav-link {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    /* NUEVO: feedback táctil */
+    .navbar .nav-link:active {
+        transform: scale(0.96);
+    }
+}
+
+/* =======================
+   BOTÓN WHATSAPP
+======================= */
+
+.btn-success {
+    background-color: #4be37a;
+    border-color: #4be37a;
+}
+
+.btn-success:hover {
+    background-color: #3fd46d;
+    border-color: #3fd46d;
+}
+
+.btn-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(75, 227, 122, 0.5);
+}
+
+@media (max-width: 768px) {
+    .btn-success.position-fixed {
+        bottom: 16px !important;
+        right: 16px !important;
+    }
+}
+
+
+/* =======================
+   FOOTER MOBILE
+======================= */
+
+
+/* =======================
+   FOOTER ESTILO NAVBAR
+======================= */
+
+footer {
+    background-color: #F4F0E5;/* mismo color que el navbar */
+    color: #333;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.08); /* sombra superior */
+}
+
+footer a {
+    color: #333;
+    text-decoration: none; /* ← esto quita las rayas */
+    transition: color 0.3s ease;
+}
+
+footer ul a:hover {
+    color: #000;
+}
+
+footer .bi {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover .bi {
+    transform: scale(1.15);
+}
+
+/* Transición general */
+footer .social-icons a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Instagram: naranja + rojo */
+footer .social-icons a.instagram:hover {
+    color: #cd1854; /* rosa/rojo Instagram */
+}
+
+/* TikTok: negro con azul */
+footer .social-icons a.tiktok:hover {
+    color: #00f2ea; /* azul TikTok */
+}
+
+/* WhatsApp */
+footer .social-icons a.whatsapp:hover {
+    color: #25D366;
+}
+
+/* Zoom suave */
+footer .social-icons a:hover {
+    transform: scale(1.15);
+}
+
+footer h5 {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+footer p,
+footer small,
+footer li {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    footer img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    footer ul {
+        padding: 0;
+    }
+}
+
+
+
